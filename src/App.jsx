@@ -51,12 +51,12 @@ const App = () => {
 
   //greeting
 
-  const currentHour = new Date().getHours;
+  const currentHour = new Date().getHours();
   let greeting = "Good Morning!";
 
-  if (currentHour > 12) {
+  if (currentHour > 12 && currentHour < 18) {
     greeting = "Good Afternoon!";
-  } else if (currentHour > 18) {
+  } else if (currentHour > 18 && currentHour < 24) {
     greeting = "Good Evening!";
   }
 
@@ -73,7 +73,7 @@ const App = () => {
         value={userInput}
         onInput={(event) => setUserInput(event.target.value)}
       />
-      <button onClick={changeLocation}>Click</button>
+      <button onClick={changeLocation}>Search</button>
       {weather && (
         <Weather
           location={weather.location.name}
