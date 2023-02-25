@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.scss";
 import Greeting from "./components/Greeting/Greeting";
 import Weather from "./components/Weather/Weather";
-import TodoList from "./components/TodoList/TodoList";
+import TodoList from "./container/TodoList/TodoList";
 
 const App = () => {
   const [location, setLocation] = useState("London");
