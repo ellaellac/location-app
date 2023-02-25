@@ -1,3 +1,5 @@
+import Button from "../Button/Button";
+
 const Task = ({ id, task, setTodo, todo }) => {
   const deleteTask = () => {
     const updatedTodoList = todo.filter((task) => task.id !== id);
@@ -5,8 +7,8 @@ const Task = ({ id, task, setTodo, todo }) => {
   };
   return (
     <>
-      <p id={id}>{task}</p>
-      <button onClick={deleteTask}>Delete</button>
+      <p>{task}</p>
+      <Button onClick={deleteTask} BtnText="Delete" />
     </>
   );
 };

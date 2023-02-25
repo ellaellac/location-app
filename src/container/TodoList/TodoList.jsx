@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Task from "../../components/Task/Task";
+import Button from "../../components/Button/Button";
 
 const TodoList = () => {
   const [todo, setTodo] = useState([]);
@@ -23,7 +24,7 @@ const TodoList = () => {
         placeholder="add new tasks..."
         onInput={(event) => setNewTask(event.target.value)}
       />
-      <button onClick={addNewTask}>Add</button>
+      <Button onClick={addNewTask} BtnText="Add" />
       {todo &&
         todo.map((task) => {
           return (

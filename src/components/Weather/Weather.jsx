@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../Button/Button";
 
 const Weather = ({
   location,
@@ -26,7 +27,7 @@ const Weather = ({
         value={userInput}
         onInput={(event) => setUserInput(event.target.value)}
       />
-      <button onClick={changeLocation}>Search</button>
+      <Button onClick={changeLocation} BtnText="Search" />
       <p>{time}</p>
       <p>{location}</p>
       <img src={icon} alt="weather-icon" />
