@@ -15,7 +15,7 @@ const TodoList = () => {
 
   return (
     <>
-      <label htmlFor="todo-list">Upcoming Task Today</label>;
+      <label htmlFor="todo-list">Upcoming Task Today</label>
       <input
         type="text"
         id="todo"
@@ -26,7 +26,15 @@ const TodoList = () => {
       <button onClick={addNewTask}>Add</button>
       {todo &&
         todo.map((task) => {
-          return <Task key={task.id} id={task.id} task={task.task} />;
+          return (
+            <Task
+              key={task.id}
+              id={task.id}
+              task={task.task}
+              setTodo={setTodo}
+              todo={todo}
+            />
+          );
         })}
     </>
   );
