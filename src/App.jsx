@@ -8,7 +8,7 @@ const App = () => {
   const [location, setLocation] = useState("London");
   const [weather, setWeather] = useState();
 
-  const WEATHER_APIKEY = process.env.WEATHER_APIKEY;
+  const { REACT_APP_WEATHER_APIKEY } = process.env;
 
   //get current Location from browser
   const getCurrentLocation = () => {
@@ -32,10 +32,14 @@ const App = () => {
   //fetch data from weather API
   const getWeather = async (location) => {
     try {
-      let url = `http://api.weatherapi.com/v1/current.json?key=${WEATHER_APIKEY}&q=${location}&aqi=no`;
+      let url = `http://api.weatherapi.com/v1/current.json?key=${REACT_APP_WEATHER_APIKEY}&q=${location}&aqi=no`;
       const response = await fetch(url);
       const data = await response.json();
-      setWeather(data);
+      if (!response.ok) {
+        alert("location not found");
+      } else {
+        setWeather(data);
+      }
     } catch (error) {
       alert(error.message);
     }

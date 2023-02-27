@@ -28,11 +28,11 @@ const Weather = ({
         onInput={(event) => setUserInput(event.target.value)}
       />
       <Button onClick={changeLocation} BtnText="Search" />
-      <p>{time}</p>
       <p>{location}</p>
       <img src={icon} alt="weather-icon" />
       <p>{temperature}°C</p>
       <p>{status}</p>
+      <p>Last update:{time}</p>
     </>
   );
 };
