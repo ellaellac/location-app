@@ -1,0 +1,14 @@
+.button__img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.weather__searchbox--search {
+  border: 1px solid black;
+  border-left: none;
+  width: max-content;
+  height: 2rem;
+  border-radius: 0 0.8rem 0.8rem 0;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+}

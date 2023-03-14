@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import deleteImg from "../../assets/delete.svg";
 
 const Task = ({ id, task, setTodo, todo }) => {
   const deleteTask = () => {
@@ -8,7 +9,7 @@ const Task = ({ id, task, setTodo, todo }) => {
   return (
     <>
       <p>{task}</p>
-      <Button onClick={deleteTask} BtnText="Delete" />
+      <Button onClick={deleteTask} BtnImg={deleteImg} />
     </>
   );
 };

@@ -1,4 +1,10 @@
-const Button = ({ onClick, BtnText }) => {
-  return <button onClick={onClick}>{BtnText}</button>;
+import "./Button.scss";
+
+const Button = ({ className, onClick, BtnImg }) => {
+  return (
+    <button className={className} onClick={onClick}>
+      <img className="button__img" src={BtnImg} alt={BtnImg} />
+    </button>
+  );
 };
 export default Button;
