@@ -12,11 +12,13 @@
     background-color: $white-colour;
     border-radius: 0.2rem;
     margin: 0.5rem 1rem;
+
     width: max-content;
     height: 2rem;
     padding-left: 1rem;
   }
   &--input {
+    border: 1px solid red;
     border: none;
     outline: none;
   }

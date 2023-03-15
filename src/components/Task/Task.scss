@@ -1,3 +1,20 @@
-.list__container {
-  border: 1px solid red;
+@use "../../styles/variables" as *;
+
+.task-container {
+  border-bottom: 3px solid black;
+  margin: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.task__text {
+  font-size: $medium-font;
+  max-width: 15rem;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow: auto;
 }

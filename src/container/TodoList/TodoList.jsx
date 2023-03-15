@@ -16,6 +16,10 @@ const TodoList = () => {
     }
   };
 
+  const handleSetNewTask = (event) => {
+    setNewTask(event.target.value);
+  };
+
   return (
     <>
       <label className="list__label" htmlFor="todo-list">
@@ -28,7 +32,7 @@ const TodoList = () => {
           id="todo"
           name="todo"
           placeholder="add new tasks..."
-          onInput={(event) => setNewTask(event.target.value)}
+          onInput={handleSetNewTask}
         />
         <Button
           className="list__btn--add"

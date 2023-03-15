@@ -1,14 +1,22 @@
+@use "../../styles/variables" as *;
 .button__img {
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .weather__searchbox--search {
-  border: 1px solid black;
-  border-left: none;
+  border: none;
   width: max-content;
   height: 2rem;
   border-radius: 0 0.8rem 0.8rem 0;
   padding-left: 0.5rem;
   padding-right: 1rem;
+}
+
+.list__btn--add,
+.list__btn--delete {
+  border: none;
+  outline: none;
+  background-color: $white-colour;
+  margin: 0.2rem;
 }
